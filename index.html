@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ASSAR - Association Santé Rurale</title>
+  <meta name="description" content="ASSAR - Association Santé Rurale. Sensibiliser, Dépister, Accompagner. Ensemble pour une santé accessible en milieu rural au Cameroun.">
+  <meta name="keywords" content="ASSAR, Santé Rurale, Drépanocytose, Cameroun, Foumban, Dépistage, Sensibilisation">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    .vision-section {
+      background: linear-gradient(rgba(0, 106, 78, 0.9), rgba(0, 106, 78, 0.8)), url('assets/img/vision-bg.jpg') center/cover;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .vision-text {
+      font-size: 1.4rem;
+      font-style: italic;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    
+    .history-section {
+      background-color: #f8f9fa;
+      padding: 80px 0;
+    }
+    
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #006a4e;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      border: 4px solid #006a4e;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    
+    .left {
+      left: 0;
+    }
+    
+    .right {
+      left: 50%;
+    }
+    
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid white;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent white;
+    }
+    
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+    
+    .right::after {
+      left: -13px;
+    }
+    
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+      
+      .left::after, .right::after {
+        left: 18px;
+      }
+      
+      .right {
+        left: 0%;
+      }
+    }
+    
+    .founder-section {
+      padding: 60px 0;
+      background-color: white;
+    }
+    
+    .founder-img {
+      border-radius: 50%;
+      max-width: 200px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:info@assar-cm.org">info@assar-cm.org</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+(237) 690 91 12 78 / 680 84 97 55</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://www.facebook.com/ASSAR.CM" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/assar_cm" class="instagram"><i class="bi bi-instagram"></i> </a>
+        </div>
+      </div>
+    </div><!-- Fin de la barre supérieure -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img src="assets/img/assarlogo.png" alt="Logo ASSAR">
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Accueil</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="#vision">Notre Vision</a></li>
+            <li><a href="#history">Notre Histoire</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#campagnes">Campagnes</a></li>
+            <li><a href="#partenaires">Partenaires</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="#contact">Nous Soutenir</a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Section Héro -->
+    <section id="hero" class="hero section light-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="Bénévoles de l'ASSAR lors d'une campagne de santé" data-aos="fade-in">
+
+      <div class="container position-relative">
+
+        <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
+          <h2>Bienvenue sur le site de l'ASSAR</h2>
+          <p>Sensibiliser, Dépister, Accompagner. Ensemble pour une santé accessible en milieu rural.</p>
+        </div><!-- Fin du message de bienvenue -->
+
+        <div class="content row gy-4">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
+              <h3>Pourquoi l'ASSAR ?</h3>
+              <p>
+                L'Association Santé Rurale (ASSAR) s'engage à améliorer l'accès aux soins et à l'information santé dans les communautés rurales du Cameroun. Notre action repose sur la conviction que la santé est un droit fondamental pour tous, grâce à des partenariats solides et un engagement communautaire.
+              </p>
+              <div class="text-center">
+                <a href="#about" class="more-btn"><span>En savoir plus</span> <i class="bi bi-chevron-right"></i></a>
+              </div>
+            </div>
+          </div><!-- Fin de la boîte "Pourquoi" -->
+
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="d-flex flex-column justify-content-center">
+              <div class="row gy-4">
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
+                    <i class="fa-solid fa-bullhorn"></i>
+                    <h4>Sensibilisation</h4>
+                    <p>Organisation de causeries éducatives pour informer les populations sur les enjeux de santé, notamment la drépanocytose.</p>
+                  </div>
+                </div><!-- Fin Boîte Icône -->
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                    <h4>Dépistage Gratuit</h4>
+                    <p>Campagnes de dépistage actif, comme le test rapide d'électrophorèse d'hémoglobine pour la drépanocytose.</p>
+                  </div>
+                </div><!-- Fin Boîte Icône -->
+
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                    <h4>Accompagnement</h4>
+                    <p>Conseils et suivi pour les personnes dépistées, en collaboration avec des professionnels de santé.</p>
+                  </div>
+                </div><!-- Fin Boîte Icône -->
+
+              </div>
+            </div>
+          </div>
+        </div><!-- Fin Contenu -->
+
+      </div>
+
+    </section><!-- /Section Héro -->
+
+    <!-- Section Vision -->
+    <section id="vision" class="vision-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto" data-aos="fade-up">
+            <h2 class="mb-4">Notre Vision</h2>
+            <div class="vision-text">
+              <p>« Santé et développement pour tous » : Rendre accessible l'information sur la santé à toutes les couches des populations du Cameroun et surtout celles des zones rurales pour ainsi réduire les morbidités et mortalités évitables à travers l'éducation sanitaire, la sensibilisation, la promotion de la santé et la formation professionnelle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Section Vision -->
+
+    <!-- Section À Propos -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4 gx-5">
+
+          <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/assar1.jpg" class="img-fluid" alt="Équipe de l'ASSAR en action sur le terrain">
+          </div>
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <h3>À Propos de l'ASSAR</h3>
+            <p>
+              L'<strong>Association Santé Rurale (ASSAR)</strong> œuvre sans relâche pour améliorer l'accès aux soins de santé primaires et préventifs dans les zones rurales du Cameroun. Notre mission est de rapprocher les services de santé des populations grâce à des actions concrètes de sensibilisation, de dépistage et d'éducation.
+            </p>
+            <ul>
+              <li>
+                <i class="fa-solid fa-people-group"></i>
+                <div>
+                  <h5>Approche Communautaire</h5>
+                  <p>Nous travaillons main dans la main avec les communautés pour identifier et répondre à leurs besoins spécifiques en matière de santé.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-handshake"></i>
+                <div>
+                  <h5>Partenariats Stratégiques</h5>
+                  <p>La réussite de nos actions est portée par des partenariats solides avec des acteurs locaux et internationaux spécialisés.</p>
+                </div>
+              </li>
+              <li>
+                <i class="fa-solid fa-heart-pulse"></i>
+                <div>
+                  <h5>Focus sur la Drépanocytose</h5>
+                  <p>Nous menons une lutte active contre la drépanocytose, une priorité de santé publique, par le dépistage et l'information.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Section À Propos -->
+
+    <!-- Section Histoire -->
+    <section id="history" class="history-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="text-center mb-5" data-aos="fade-up">Notre Histoire</h2>
+            
+            <div class="timeline">
+              <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                  <h3>2022: Naissance de l'ASSAR</h3>
+                  <p>L'Association Santé Rurale (ASSAR) est née de la volonté de répondre aux profondes inégalités d'accès aux soins de santé entre les zones urbaines et rurales du Cameroun. Un groupe de jeunes, de professionnels de santé et d'acteurs communautaires, conduit par le Dr Njimogna Loukouman Akim, a initié un mouvement associatif orienté vers la promotion de la santé et du développement en milieu rural.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                  <h3>8 Septembre 2022: Constitution Officielle</h3>
+                  <p>L'urgence d'apporter une réponse concertée et durable s'est imposée, conduisant à la constitution officielle de l'association le 8 septembre 2022.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                  <h3>2023: Lancement du Projet DREPA.NOUN</h3>
+                  <p>Le Projet DREPA.NOUN, centré sur la lutte contre la drépanocytose dans le département du Noun, fut l'un des premiers cadres d'action communautaire. Ce projet a servi de tremplin à une mobilisation plus large autour de la santé rurale.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                  <h3>2023: Descentes dans le Noun</h3>
+                  <p>L'ASSAR a organisé des descentes dans plusieurs arrondissements du Noun (Foumban, Kouoptamo, Koutaba) pour éduquer, sensibiliser et dépister les populations concernant la drépanocytose.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item left" data-aos="fade-right">
+                <div class="timeline-content">
+                  <h3>30 Août 2025: Adoption des Axes Stratégiques</h3>
+                  <p>L'assemblée générale a adopté les axes stratégiques pour la période 2025-2030. L'association s'est dotée d'une vision claire : "Santé et Développement pour Tous".</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item right" data-aos="fade-left">
+                <div class="timeline-content">
+                  <h3>Initiatives et Réalisations</h3>
+                  <p>L'ASSAR a multiplié les initiatives : dépistages communautaires, championnat "2-0 Santé et Développement", journal "Santé Rurale Hebdo", programmes ciblés (PALU ZÉ, Programme Santé et Éducation de la Jeune Fille).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Section Fondateur -->
+        <div class="founder-section text-center">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <img src="assets/img/founder.jpg" alt="Dr Njimogna Loukouman Akim" class="founder-img">
+              <h3>Dr Njimogna Loukouman Akim</h3>
+              <p class="lead">Fondateur et Président de l'ASSAR</p>
+              <p>Médecin engagé dans la santé publique, le Dr Njimogna Loukouman Akim a initié l'ASSAR après avoir constaté les profondes inégalités d'accès aux soins entre zones urbaines et rurales lors de ses expériences de terrain dans les hôpitaux de district et centres médicaux d'arrondissement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Section Histoire -->
+
+    <!-- Section Chiffres -->
+    <section id="stats" class="stats section light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-user-doctor"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Professionnels de Santé</p>
+            </div>
+          </div><!-- Fin Item Chiffre -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-hand-holding-medical"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="196" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Personnes Dépistées</p>
+            </div>
+          </div><!-- Fin Item Chiffre -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-calendar-check"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Journées de Campagne</p>
+            </div>
+          </div><!-- Fin Item Chiffre -->
+
+          <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
+            <i class="fa-solid fa-people-line"></i>
+            <div class="stats-item">
+              <span data-purecounter-start="0" data-purecounter-end="280" data-purecounter-duration="1" class="purecounter"></span>
+              <p>Personnes Sensibilisées</p>
+            </div>
+          </div><!-- Fin Item Chiffre -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Section Chiffres -->
+
+    <!-- Section Services -->
+    <section id="services" class="services section">
+
+      <!-- Titre de Section -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Nos Domaines d'Action</h2>
+        <p>Nos activités sont orientées vers la prévention et l'autonomisation des communautés rurales.</p>
+      </div><!-- Fin Titre de Section -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-microscope"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Dépistage des Maladies</h3>
+              </a>
+              <p>Organisation de campagnes de dépistage gratuit pour des maladies comme la drépanocytose, avec des tests rapides et fiables.</p>
+            </div>
+          </div><!-- Fin Item Service -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-person-chalkboard"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Éducation à la Santé</h3>
+              </a>
+              <p>Animation de causeries éducatives et de séances de sensibilisation sur l'hygiène, la prévention et la gestion des maladies.</p>
+            </div>
+          </div><!-- Fin Item Service -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-hand-holding-heart"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Accompagnement Psychosocial</h3>
+              </a>
+              <p>Conseils et orientation des patients et de leurs familles vers les structures de prise en charge appropriées.</p>
+            </div>
+          </div><!-- Fin Item Service -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-syringe"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Santé Préventive</h3>
+              </a>
+              <p>Promotion de la vaccination, des consultations prénatales et d'autres pratiques essentielles de santé préventive.</p>
+            </div>
+          </div><!-- Fin Item Service -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-notes-medical"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Plaidoyer</h3>
+              </a>
+              <p>Renforcement des capacités des acteurs locaux et plaidoyer pour l'amélioration des infrastructures de santé en zone rurale.</p>
+            </div>
+          </div><!-- Fin Item Service -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-truck-medical"></i>
+              </div>
+              <a href="#" class="stretched-link">
+                <h3>Missions de Proximité</h3>
+              </a>
+              <p>Déploiement d'équipes mobiles pour toucher les populations des villages les plus reculés du département du Noun.</p>
+            </div>
+          </div><!-- Fin Item Service -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Section Services -->
+
+    <!-- Section Campagnes Récents -->
+    <section id="campagnes" class="appointment section">
+
+      <!-- Titre de Section -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Notre Campagne Récente</h2>
+        <p>Campagne de sensibilisation et de dépistage de la drépanocytose à Foumban (Février 2024)</p>
+      </div><!-- Fin Titre de Section -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="campaign-summary">
+              <p>En Février 2024, l'ASSAR et son réseau de partenaires ont organisé une grande campagne de sensibilisation et de dépistage gratuit de la drépanocytose dans la ville de Foumban, une réussite collective pour la santé dans le Noun.</p>
+              <ul>
+                <li><strong>📅 Le 15 Février 2024</strong> à la Croix-Rouge de Dallas Foumban : <strong>63 personnes dépistées</strong>.</li>
+                <li><strong>📅 Le 16 Février 2024</strong> à l'Hôpital de District de Foumban : <strong>Près de 133 personnes dépistées</strong>.</li>
+              </ul>
+              <p>Cette activité a été un franc succès, ayant reçu plus de 280 personnes et permis d'offrir un accompagnement et des conseils précieux aux populations.</p>
+              <p class="mt-3"><em>Cette campagne a été rendue possible grâce au soutien technique et matériel de nos partenaires, notamment le <strong>GEDREPACAM</strong> et la <strong>Fondation Pierre Fabre</strong>.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Section Campagnes -->
+
+    <!-- Section Partenaires -->
+    <section id="partenaires" class="departments section">
+
+      <!-- Titre de Section -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Nos Partenaires</h2>
+        <p>La réussite de nos actions repose sur la collaboration étroite avec un réseau de partenaires engagés.</p>
+      </div><!-- Fin Titre de Section -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+          <div class="col-lg-3">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Partenaires Techniques</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Partenaires Locaux</a></li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Partenaires Média</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Partenaires Techniques & Stratégiques</h3>
+                    <p class="fst-italic">Un appui précieux pour l'expertise et les ressources.</p>
+                    <p>
+                      <strong>GEDREPACAM (Groupe d'Étude de la Drépanocytose au Cameroun)</strong> : Notre partenaire clé qui nous a offert 200 tests de dépistage et accompagné avec une équipe médicale sur le terrain.
+                    </p>
+                    <p>
+                      <strong>Fondation Pierre Fabre</strong> : Partenaire international investi dans la lutte contre la drépanocytose au Cameroun.
+                    </p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/partenaires/technique.jpg" alt="Logo Partenaires Techniques" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Partenaires Locaux Impliqués</h3>
+                    <p class="fst-italic">Le pilier de notre ancrage communautaire.</p>
+                    <p><strong>APEES (Association Pour L'enfance, L'éducation Et La Solidarité)</strong> : Partenaire de premier plan dont le Président assure la Direction Adjointe chargée du Suivi du Projet.</p>
+                    <p><strong>A-ERAPRO</strong> : Son Secrétaire Général, également SGA du projet DREPA-NOUN, est d'une disponibilité remarquable.</p>
+                    <p><strong>CPMS (Cercle des Professionnels Medico-Sanitaire du Noun)</strong> : Pour leur disponibilité et leur accompagnement avec leur personnel depuis le début du projet.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/partenaires/locaux.jpg" alt="Logo Partenaires Locaux" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Partenaires Média</h3>
+                    <p class="fst-italic">Pour une communication efficace et une large sensibilisation.</p>
+                    <p><strong>L'Observateur</strong> : Pour ses publications sur les réseaux qui nous ont permis d'atteindre nos objectifs en termes de communication et de visibilité.</p>
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/partenaires/media.jpg" alt="Logo Partenaires Média" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Section Partenaires -->
+
+    <!-- Section Témoignages -->
+    <section id="testimonials" class="testimonials section">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+
+          <div class="col-lg-5 info" data-aos="fade-up" data-aos-delay="100">
+            <h3>Témoignages</h3>
+            <p>
+              Découvrez les retours d'expérience des participants à nos campagnes et de nos partenaires sur le terrain. Leur satisfaction est la meilleure récompense de notre engagement.
+            </p>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="assets/img/testimonials/participant1.jpg" class="testimonial-img flex-shrink-0" alt="Participant">
+                      <div>
+                        <h3>Un Participant</h3>
+                        <h4>Bénéficiaire, Foumban</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Je suis très satisfait de l'accueil, de l'éducation lors de la causerie et des conseils reçus. Cette initiative est une bénédiction pour notre communauté.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- Fin témoignage -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <div class="d-flex">
+                      <img src="assets/img/testimonials/partenaire1.jpg" class="testimonial-img flex-shrink-0" alt="Partenaire">
+                      <div>
+                        <h3>Représentant GEDREPACAM</h3>
+                        <h4>Partenaire Technique</h4>
+                        <div class="stars">
+                          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <p>
+                      <i class="bi bi-quote quote-icon-left"></i>
+                      <span>Collaborer avec l'ASSAR sur le terrain est une expérience enrichissante. Leur organisation et leur lien avec la population sont exemplaires.</span>
+                      <i class="bi bi-quote quote-icon-right"></i>
+                    </p>
+                  </div>
+                </div><!-- Fin témoignage -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Section Témoignages -->
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact section">
+
+      <!-- Titre de Section -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>N'hésitez pas à nous contacter pour plus d'informations, pour devenir bénévole ou pour soutenir nos actions.</p>
+      </div><!-- Fin Titre de Section -->
+
+      <!-- Carte - A REMPLACER par les coordonnées de Foumban si possible -->
+      <div class="mb-5" data-aos="fade-up" data-aos-delay="200">
+        <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.358382365702!2d10.898389574996622!3d4.243450396003567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106e1d42d9c2d3a1%3A0x6b02bdcf6f2c0b8e!2sFoumban%2C%20Cameroun!5e0!3m2!1sfr!2sfr!4v1695400000000!5m2!1sfr!2sfr" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div><!-- Fin Google Maps -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Localisation</h3>
+                <p>Foumban, Département du Noun, Cameroun</p>
+              </div>
+            </div><!-- Fin Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Appelez-nous</h3>
+                <p>+(237) 690 91 12 78<br>+(237) 680 84 97 55</p>
+              </div>
+            </div><!-- Fin Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Écrivez-nous</h3>
+                <p>info@assar-cm.org</p>
+              </div>
+            </div><!-- Fin Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre Nom" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Sujet" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Chargement</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Votre message a été envoyé. Merci !</div>
+
+                  <button type="submit">Envoyer le Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- Fin Formulaire de Contact -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Section Contact -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">ASSAR</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Association Santé Rurale</p>
+            <p>Foumban, Département du Noun, Cameroun</p>
+            <p class="mt-3"><strong>Téléphone:</strong> <span>+(237) 690 91 12 78 / 680 84 97 55</span></p>
+            <p><strong>Email:</strong> <span>info@assar-cm.org</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.facebook.com/ASSAR.CM"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/assar_cm"><i class="bi bi-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Liens Utiles</h4>
+          <ul>
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#about">À Propos</a></li>
+            <li><a href="#vision">Notre Vision</a></li>
+            <li><a href="#history">Notre Histoire</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Nos Services</h4>
+          <ul>
+            <li><a href="#services">Dépistage</a></li>
+            <li><a href="#services">Sensibilisation</a></li>
+            <li><a href="#services">Accompagnement</a></li>
+            <li><a href="#services">Plaidoyer</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Notre Newsletter</h4>
+          <p>Abonnez-vous pour recevoir nos actualités et les dates de nos prochaines campagnes.</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <input type="email" name="email" placeholder="Votre adresse e-mail" required=""><input type="submit" value="S'abonner">
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">ASSAR</strong> <span>Tous droits réservés</span></p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
