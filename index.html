@@ -9,7 +9,7 @@
   <meta name="keywords" content="ASSAR, Santé Rurale, Drépanocytose, Cameroun, Foumban, Dépistage, Sensibilisation">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/favico.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -171,6 +171,82 @@
       margin: 0 auto 20px;
       display: block;
     }
+    
+    /* New Partner Section Styles */
+    .partners-section {
+      padding: 80px 0;
+      background-color: #f8f9fa;
+    }
+    
+    .partner-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 15px;
+    }
+    
+    .partner-logo:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .partner-logo img {
+      max-height: 80px;
+      max-width: 100%;
+      object-fit: contain;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    
+    .partner-logo:hover img {
+      filter: grayscale(0%);
+    }
+    
+    .partners-slider {
+      position: relative;
+      overflow: hidden;
+      padding: 40px 0;
+    }
+    
+    .partner-category {
+      margin-bottom: 50px;
+    }
+    
+    .partner-category h3 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #006a4e;
+      font-weight: 600;
+    }
+    
+    .swiper-button-next, .swiper-button-prev {
+      color: #006a4e;
+      background: rgba(255, 255, 255, 0.8);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 18px;
+    }
+    
+    @media (max-width: 768px) {
+      .partner-logo {
+        height: 100px;
+      }
+      
+      .partner-logo img {
+        max-height: 60px;
+      }
+    }
   </style>
 </head>
 
@@ -212,7 +288,7 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="cta-btn d-none d-sm-block" href="#contact">Nous Soutenir</a>
+        <a class="cta-btn d-none d-sm-block" target="_blank" href="https://my-coolpay.com/fr/cagnotte/9ovft7/projet-drepanoun-campagne-contre-la-drepanocytose-dans-le-noun">Nous Soutenir</a>
 
       </div>
 
@@ -576,7 +652,7 @@
     </section><!-- /Section Campagnes -->
 
     <!-- Section Partenaires -->
-    <section id="partenaires" class="departments section">
+    <section id="partenaires" class="partners-section">
 
       <!-- Titre de Section -->
       <div class="container section-title" data-aos="fade-up">
@@ -585,75 +661,98 @@
       </div><!-- Fin Titre de Section -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-3">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item">
-                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Partenaires Techniques</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Partenaires Locaux</a></li>
-              <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Partenaires Média</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-9 mt-4 mt-lg-0">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Partenaires Techniques & Stratégiques</h3>
-                    <p class="fst-italic">Un appui précieux pour l'expertise et les ressources.</p>
-                    <p>
-                      <strong>GEDREPACAM (Groupe d'Étude de la Drépanocytose au Cameroun)</strong> : Notre partenaire clé qui nous a offert 200 tests de dépistage et accompagné avec une équipe médicale sur le terrain.
-                    </p>
-                    <p>
-                      <strong>Fondation Pierre Fabre</strong> : Partenaire international investi dans la lutte contre la drépanocytose au Cameroun.
-                    </p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/partenaires/technique.jpg" alt="Logo Partenaires Techniques" class="img-fluid">
+        
+        <!-- Partenaires Techniques -->
+        <div class="partner-category">
+          <div class="partners-slider">
+            <div class="swiper partners-swiper-technical">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/logo1.jpg" alt="GEDREPACAM">
                   </div>
                 </div>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Partenaires Locaux Impliqués</h3>
-                    <p class="fst-italic">Le pilier de notre ancrage communautaire.</p>
-                    <p><strong>APEES (Association Pour L'enfance, L'éducation Et La Solidarité)</strong> : Partenaire de premier plan dont le Président assure la Direction Adjointe chargée du Suivi du Projet.</p>
-                    <p><strong>A-ERAPRO</strong> : Son Secrétaire Général, également SGA du projet DREPA-NOUN, est d'une disponibilité remarquable.</p>
-                    <p><strong>CPMS (Cercle des Professionnels Medico-Sanitaire du Noun)</strong> : Pour leur disponibilité et leur accompagnement avec leur personnel depuis le début du projet.</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/partenaires/locaux.jpg" alt="Logo Partenaires Locaux" class="img-fluid">
+                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/Logo-2.jpg" alt="Fondation Pierre Fabre">
                   </div>
                 </div>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <div class="row">
-                  <div class="col-lg-8 details order-2 order-lg-1">
-                    <h3>Partenaires Média</h3>
-                    <p class="fst-italic">Pour une communication efficace et une large sensibilisation.</p>
-                    <p><strong>L'Observateur</strong> : Pour ses publications sur les réseaux qui nous ont permis d'atteindre nos objectifs en termes de communication et de visibilité.</p>
-                  </div>
-                  <div class="col-lg-4 text-center order-1 order-lg-2">
-                    <img src="assets/img/partenaires/media.jpg" alt="Logo Partenaires Média" class="img-fluid">
+                                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/Logo4.jpg" alt="Fondation Pierre Fabre">
                   </div>
                 </div>
+                                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/Logo-3.png" alt="Fondation Pierre Fabre">
+                  </div>
+                </div>
+                 <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/Logo5.png" alt="Fondation Pierre Fabre">
+                  </div>
+                </div>
+                <!-- Add more technical partners here -->
               </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
             </div>
           </div>
         </div>
-
+        
+        <!-- Partenaires Locaux -->
+        <!-- <div class="partner-category">
+          <h3>Partenaires Locaux Impliqués</h3>
+          <div class="partners-slider">
+            <div class="swiper partners-swiper-local">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/partenaires/apees.png" alt="APEES">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/partenaires/a-erapro.png" alt="A-ERAPRO">
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/partenaires/cpms.png" alt="CPMS">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div> -->
+        
+        <!-- Partenaires Média -->
+        <!-- <div class="partner-category">
+          <h3>Partenaires Média</h3>
+          <div class="partners-slider">
+            <div class="swiper partners-swiper-media">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="partner-logo">
+                    <img src="assets/img/partenaires/lobservateur.png" alt="L'Observateur">
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div> -->
+        
       </div>
 
-    </section><!-- /Section Partenaires -->
+    </section>
+    <!-- /Section Partenaires -->
 
     <!-- Section Témoignages -->
-    <section id="testimonials" class="testimonials section">
+    <!-- <section id="testimonials" class="testimonials section">
 
       <div class="container">
 
@@ -704,7 +803,7 @@
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
-                </div><!-- Fin témoignage -->
+                </div>
 
                 <div class="swiper-slide">
                   <div class="testimonial-item">
@@ -724,7 +823,7 @@
                       <i class="bi bi-quote quote-icon-right"></i>
                     </p>
                   </div>
-                </div><!-- Fin témoignage -->
+                </div>
 
               </div>
               <div class="swiper-pagination"></div>
@@ -736,7 +835,8 @@
 
       </div>
 
-    </section><!-- /Section Témoignages -->
+    </section> -->
+    <!-- /Section Témoignages -->
 
     <!-- Section Contact -->
     <section id="contact" class="contact section">
@@ -900,6 +1000,98 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Initialize partner sliders
+    document.addEventListener('DOMContentLoaded', function() {
+      // Technical partners slider
+      const technicalSwiper = new Swiper('.partners-swiper-technical', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.partners-swiper-technical .swiper-button-next',
+          prevEl: '.partners-swiper-technical .swiper-button-prev',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          }
+        }
+      });
+      
+      // Local partners slider
+      const localSwiper = new Swiper('.partners-swiper-local', {
+        loop: true,
+        slidesPerView: 3,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.partners-swiper-local .swiper-button-next',
+          prevEl: '.partners-swiper-local .swiper-button-prev',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          }
+        }
+      });
+      
+      // Media partners slider
+      const mediaSwiper = new Swiper('.partners-swiper-media', {
+        loop: true,
+        slidesPerView: 2,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.partners-swiper-media .swiper-button-next',
+          prevEl: '.partners-swiper-media .swiper-button-prev',
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 40
+          }
+        }
+      });
+    });
+  </script>
 
 </body>
 
