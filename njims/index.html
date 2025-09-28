@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Njimogna L. Akim - Médecin Généraliste</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2a7a9c;
+            --primary-dark: #1e5a72;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray: #f5f5f5;
+            --text: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .card {
+            width: 100%;
+            max-width: 420px;
+            background: var(--light);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            background: var(--dark);
+            color: var(--light);
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .profile-container {
+            position: relative;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 20px;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #e0f0f7;
+            color: var(--primary);
+            font-size: 3rem;
+        }
+        
+        .profile-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--light);
+            color: var(--light);
+        }
+        
+        .name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--light);
+        }
+        
+        .title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        
+        .card-body {
+            padding: 20px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(42, 122, 156, 0.2);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title i {
+            margin-right: 10px;
+        }
+        
+        .bio {
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        
+        .contact-info i {
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+        
+        .roles-list {
+            list-style: none;
+        }
+        
+        .roles-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: var(--text);
+            line-height: 1.5;
+        }
+        
+        .roles-list li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 30px 0 25px;
+        }
+        
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--dark);
+            color: var(--light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid var(--dark);
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            background: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 14px;
+            background: var(--primary);
+            color: var(--light);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            gap: 10px;
+        }
+        
+        .download-btn:hover {
+            background: var(--primary-dark);
+            box-shadow: 0 5px 15px rgba(42, 122, 156, 0.3);
+        }
+        
+        @media (max-width: 480px) {
+            .card {
+                max-width: 350px;
+            }
+            
+            .card-header {
+                padding: 25px 20px;
+            }
+            
+            .card-body {
+                padding: 25px 20px;
+            }
+            
+            .name {
+                font-size: 1.6rem;
+            }
+            
+            .profile-container {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="profile-container">
+                <div class="profile-img">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div class="profile-overlay">
+                    <i class="fas fa-plus"></i>
+                </div>
+            </div>
+            <h1 class="name">Dr. Njimogna L. Akim</h1>
+            <p class="title">Médecin Généraliste | Médecin-chef CMA Koutaba-Mataket</p>
+        </div>
+        
+        <div class="card-body">
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-user-md"></i> À Propos</h3>
+                <p class="bio">
+                    Médecin engagé dans la santé publique, le Dr Njimogna Loukouman Akim a initié l'ASSAR après avoir constaté les profondes inégalités d'accès aux soins entre zones urbaines et rurales lors de ses expériences de terrain dans les hôpitaux de district et centres médicaux d'arrondissement.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-briefcase"></i> Rôles & Responsabilités</h3>
+                <ul class="roles-list">
+                    <li>Médecin Généraliste</li>
+                    <li>Médecin-chef du CMA Koutaba-Mataket</li>
+                    <li>Président Association Santé Rurale (ASSAR)</li>
+                    <li>Directeur Général des Structures ASSAR</li>
+                    <li>Écrivain poète Panafricain</li>
+                    <li>Directeur Technique Projet DREPA.NOUN</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title"><i class="fas fa-address-card"></i> Contact</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +237 XXX XXX XXX</li>
+                    <li><i class="fas fa-envelope"></i> dr.njimogna@example.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> CMA Koutaba-Mataket, Cameroun</li>
+                </ul>
+            </div>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fas fa-globe"></i></a>
+            </div>
+            
+            <button class="download-btn" onclick="downloadVCard()">
+                <i class="fas fa-download"></i> Sauvegarder le Contact
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function downloadVCard() {
+            const vCardData = `BEGIN:VCARD
+VERSION:3.0
+N:Njimogna;Akim;L.;
+FN:Dr. Njimogna L. Akim
+ORG:CMA Koutaba-Mataket
+TITLE:Médecin Généraliste
+ROLE:Médecin-chef du CMA Koutaba-Mataket;Président Association Santé Rurale;Directeur Général des Structures ASSAR;Écrivain poète Panafricain;Directeur Technique Projet DREPA.NOUN
+NOTE:Médecin engagé dans la santé publique, le Dr Njimogna Loukouman Akim a initié l'ASSAR après avoir constaté les profondes inégalités d'accès aux soins entre zones urbaines et rurales lors de ses expériences de terrain dans les hôpitaux de district et centres médicaux d'arrondissement.
+END:VCARD`;
+            
+            const blob = new Blob([vCardData], { type: 'text/vcard' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'Dr_Njimogna_Akim.vcf';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
