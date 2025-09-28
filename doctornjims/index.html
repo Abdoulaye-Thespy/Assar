@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2a7a9c;
-            --primary-dark: #1e5a72;
+            --primary: #006a4e;
+            --primary-light: #008c68;
+            --primary-dark: #004d38;
             --dark: #1a1a1a;
             --light: #ffffff;
             --gray: #f5f5f5;
@@ -117,7 +118,7 @@
             color: var(--primary);
             margin-bottom: 15px;
             padding-bottom: 8px;
-            border-bottom: 2px solid rgba(42, 122, 156, 0.2);
+            border-bottom: 2px solid rgba(0, 106, 78, 0.2);
             font-weight: 600;
             display: flex;
             align-items: center;
@@ -224,7 +225,7 @@
         
         .download-btn:hover {
             background: var(--primary-dark);
-            box-shadow: 0 5px 15px rgba(42, 122, 156, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 106, 78, 0.3);
         }
         
         @media (max-width: 480px) {
@@ -263,7 +264,7 @@
                 </div>
             </div>
             <h1 class="name">Dr. Njimogna L. Akim</h1>
-            <p class="title">Médecin Généraliste | Médecin-chef CMA Koutaba-Mataket</p>
+            <p class="title">Médecin Généraliste | Président Association Santé Rurale</p>
         </div>
         
         <div class="card-body">
@@ -277,7 +278,6 @@
             <div class="section">
                 <h3 class="section-title"><i class="fas fa-briefcase"></i> Rôles & Responsabilités</h3>
                 <ul class="roles-list">
-                    <li>Médecin Généraliste</li>
                     <li>Médecin-chef du CMA Koutaba-Mataket</li>
                     <li>Président Association Santé Rurale (ASSAR)</li>
                     <li>Directeur Général des Structures ASSAR</li>
@@ -289,8 +289,10 @@
             <div class="section">
                 <h3 class="section-title"><i class="fas fa-address-card"></i> Contact</h3>
                 <ul class="contact-info">
-                    <li><i class="fas fa-phone"></i> +237 XXX XXX XXX</li>
-                    <li><i class="fas fa-envelope"></i> dr.njimogna@example.com</li>
+                    <li><i class="fas fa-phone"></i> +237 690 911 278</li>
+                    <li><i class="fas fa-phone"></i> +237 680 849 755</li>
+                    <li><i class="fas fa-envelope"></i> njimogna.akim91@gmail.com</li>
+                    <li><i class="fas fa-envelope"></i> president@assar-cm.org</li>
                     <li><i class="fas fa-map-marker-alt"></i> CMA Koutaba-Mataket, Cameroun</li>
                 </ul>
             </div>
@@ -312,10 +314,15 @@
         function downloadVCard() {
             const vCardData = `BEGIN:VCARD
 VERSION:3.0
-N:Njimogna;Akim;L.;
+N:Njimogna;Akim;L.;Dr.;
 FN:Dr. Njimogna L. Akim
 ORG:CMA Koutaba-Mataket
 TITLE:Médecin Généraliste
+TEL;TYPE=WORK,VOICE:+237690911278
+TEL;TYPE=WORK,VOICE:+237680849755
+EMAIL;TYPE=WORK,INTERNET:njimogna.akim91@gmail.com
+EMAIL;TYPE=WORK,INTERNET:president@assar-cm.org
+ADR;TYPE=WORK:;;CMA Koutaba-Mataket;;;CM
 ROLE:Médecin-chef du CMA Koutaba-Mataket;Président Association Santé Rurale;Directeur Général des Structures ASSAR;Écrivain poète Panafricain;Directeur Technique Projet DREPA.NOUN
 NOTE:Médecin engagé dans la santé publique, le Dr Njimogna Loukouman Akim a initié l'ASSAR après avoir constaté les profondes inégalités d'accès aux soins entre zones urbaines et rurales lors de ses expériences de terrain dans les hôpitaux de district et centres médicaux d'arrondissement.
 END:VCARD`;
