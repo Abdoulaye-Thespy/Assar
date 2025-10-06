@@ -31,6 +31,51 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <style>
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      transition: transform 0.3s ease;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-text {
+      text-align: center;
+      transform: translateY(20px);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-text {
+      transform: translateY(0);
+    }
+    
     .vision-section {
       background: linear-gradient(rgba(0, 106, 78, 0.9), rgba(0, 106, 78, 0.8)), url('assets/img/vision-bg.jpg') center/cover;
       color: white;
@@ -170,6 +215,14 @@
       max-width: 200px;
       margin: 0 auto 20px;
       display: block;
+      border: 5px solid #f0f0f0;
+      box-shadow: 0 5px 15px rgba(0, 106, 78, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .founder-img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 25px rgba(0, 106, 78, 0.2);
     }
     
     /* New Partner Section Styles */
@@ -282,7 +335,9 @@
             <li><a href="#history">Notre Histoire</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#campagnes">Campagnes</a></li>
+            
             <li><a href="#partenaires">Partenaires</a></li>
+            <li><a href="#Galerie">Galerie</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -478,7 +533,7 @@
         <div class="founder-section text-center">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <img src="assets/img/founder.jpg" alt="Dr Njimogna Loukouman Akim" class="founder-img">
+              <img src="assets/img/doctors/PRASSAR.jpg" alt="Dr Njimogna Loukouman Akim" class="founder-img">
               <h3>Dr Njimogna Loukouman Akim</h3>
               <p class="lead">Fondateur et Président de l'ASSAR</p>
               <p>Médecin engagé dans la santé publique, le Dr Njimogna Loukouman Akim a initié l'ASSAR après avoir constaté les profondes inégalités d'accès aux soins entre zones urbaines et rurales lors de ses expériences de terrain dans les hôpitaux de district et centres médicaux d'arrondissement.</p>
@@ -750,6 +805,95 @@
 
     </section>
     <!-- /Section Partenaires -->
+
+
+    <!-- Gallery Section -->
+<section class="gallery-section py-5 bg-light" id="Galerie">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="display-5 fw-bold mb-3">Photos</h2>
+        <p class="lead text-muted">Nos meuilleurs moments.</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Gallery Item 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/gallery/3.jpg" class="img-fluid rounded shadow-sm" alt="L'Observateur">
+          <div class="gallery-overlay rounded">
+            <div class="gallery-text">
+              <h5 class="text-white">Siège Social</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/gallery/4.jpg" class="img-fluid rounded shadow-sm" alt="L'Observateur">
+          <div class="gallery-overlay rounded">
+            <div class="gallery-text">
+              <h5 class="text-white">Infos</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/gallery/5.jpg" class="img-fluid rounded shadow-sm" alt="L'Observateur">
+          <div class="gallery-overlay rounded">
+            <div class="gallery-text">
+              <h5 class="text-white">Bureau</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 4 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/gallery/6.jpg" class="img-fluid rounded shadow-sm" alt="L'Observateur">
+          <div class="gallery-overlay rounded">
+            <div class="gallery-text">
+              <h5 class="text-white">Président signe accord</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 5 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/gallery/7.jpg" class="img-fluid rounded shadow-sm" alt="L'Observateur">
+          <div class="gallery-overlay rounded">
+            <div class="gallery-text">
+              <h5 class="text-white">Président remise prime</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Item 6 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="gallery-item">
+          <img src="assets/img/gallery/8.jpg" class="img-fluid rounded shadow-sm" alt="L'Observateur">
+          <div class="gallery-overlay rounded">
+            <div class="gallery-text">
+              <h5 class="text-white">VIP guests Championnat, Président ASSAR</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- Section Témoignages -->
     <!-- <section id="testimonials" class="testimonials section">
